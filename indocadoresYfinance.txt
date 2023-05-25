@@ -1,0 +1,39 @@
+A biblioteca `yfinance` fornece uma variedade de indicadores quantitativos relacionados a ações. Aqui estão alguns exemplos dos indicadores disponíveis:
+
+1. Preço:
+   - Preço de fechamento (`Close`)
+   - Preço de abertura (`Open`)
+   - Preço mínimo (`Low`)
+   - Preço máximo (`High`)
+
+2. Volume:
+   - Volume de negociação (`Volume`)
+   - Média móvel do volume (`Volume_MA`)
+
+3. Médias Móveis:
+   - Média móvel simples (`SMA`)
+   - Média móvel exponencial (`EMA`)
+
+4. Bandas de Bollinger:
+   - Banda superior (`BollingerB_High`)
+   - Banda inferior (`BollingerB_Low`)
+   - Banda média (`BollingerB_Middle`)
+
+5. MACD (Moving Average Convergence Divergence):
+   - Linha MACD (`MACD`)
+   - Sinal MACD (`MACD_Signal`)
+   - Histograma MACD (`MACD_Hist`)
+
+6. Índice de Força Relativa (RSI):
+   - RSI (`RSI`)
+
+7. Estocástico:
+   - Oscilador estocástico (`Stochastic`)
+   - Linha %K do estocástico (`StochasticK`)
+   - Linha %D do estocástico (`StochasticD`)
+
+Esses são apenas alguns exemplos dos indicadores disponíveis por meio da `yfinance`. A biblioteca também permite o cálculo de indicadores personalizados, permitindo maior flexibilidade na análise quantitativa.
+
+Você pode consultar a documentação oficial da `yfinance` para obter mais informações sobre os indicadores disponíveis e como usá-los: [https://pypi.org/project/yfinance/](https://pypi.org/project/yfinance/)
+
+Além disso, lembre-se de que a disponibilidade de indicadores específicos pode variar dependendo da fonte de dados e da disponibilidade dos dados para cada ação específica.
