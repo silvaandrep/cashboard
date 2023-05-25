@@ -6,7 +6,7 @@ st.title('Meu Primeiro Aplicativo Streamlit')
 # Adicionando um texto
 st.write('Bem-vindo ao meu aplicativo!')
 
-# Adicionando um gráfico
+'''# Adicionando um gráfico
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -20,3 +20,4 @@ st.write('Olá, ', user_input, '!')
 
 # Exibindo uma tabela
 st.write(data)
+'''
