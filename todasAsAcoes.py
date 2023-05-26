@@ -7,5 +7,7 @@ stocks = investpy.get_stocks_list(country='brazil')
 sorted_stocks = sorted(stocks)
 
 # Imprimir os tickets das ações brasileiras em ordem alfabética
-for stock in sorted_stocks:
-    print(stock)
+#for stock in sorted_stocks:
+#    print(stock)
+
+selected_ticker = st.selectbox('Selecione um ticker', tickers)
