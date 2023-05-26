@@ -1,5 +1,4 @@
 import streamlit as st
-
 import investpy
 
 # Obter lista de ações brasileiras
