@@ -1,0 +1,117 @@
+import investpy as iv
+import yfinance as yf
+
+# Obter lista de ações brasileiras
+stocks = iv.get_stocks_list(country='brazil')
+
+# Ordenar a lista de tickets em ordem alfabética
+stocks = sorted(stocks)
+
+petrobras = yf.Ticker("PETR4.SA")
+
+# Informações básicas da ação
+info = petrobras.info
+print("Nome da empresa:", info['longName'])
+print("Símbolo da ação:", info['symbol'])
+print("Setor:", info['sector'])
+print("Descrição da empresa:", info['longBusinessSummary'])
+print("País de origem:", info['country'])
+
+
+print(petrobras)
+
+
+
+
+
+import investpy as iv
+import yfinance as yf
+
+# Obter lista de ações brasileiras
+stocks = iv.get_stocks_list(country='brazil')
+
+# Ordenar a lista de tickets em ordem alfabética
+stocks = sorted(stocks)
+
+petrobras = yf.Ticker("PETR3.SA")
+
+print(petrobras)
+
+# Informações básicas da ação
+info = petrobras.info
+
+print("Nome da empresa:", info['longName'])
+print("Símbolo da ação:", info['symbol'])
+print("Setor:", info['sector'])
+print("Descrição da empresa:", info['longBusinessSummary'])
+print("País de origem:", info['country'])
+
+print("=====================")
+
+chave_desejada = 'longName'
+print(chave_desejada, ":", info[chave_desejada])
+
+petrobras = yf.Ticker("PETR4.SA")
+
+traducoes = {
+    'address1':'Endereço',
+    'longName': 'Nome da empresa',
+    'symbol': 'Símbolo da ação',
+    'sector': 'Setor',
+    'industry': 'Indústria',
+    'previousClose': 'Fechamento anterior',
+    'regularMarketOpen': 'Abertura do mercado regular',
+    'regularMarketDayHigh': 'Máxima do dia',
+    'regularMarketDayLow': 'Mínima do dia',
+    'regularMarketVolume': 'Volume de negociação',
+    'marketCap': 'Capitalização de mercado',
+    'trailingPE': 'P/L (Preço/Lucro)',
+    'forwardPE': 'P/L Forward',
+    'beta': 'Beta',
+    'dividendYield': 'Dividendo de rendimento',
+    'dividendRate': 'Dividendo por ação',
+    'exDividendDate': 'Data ex-dividendo',
+    'payoutRatio': 'Razão de pagamento de dividendos',
+    'trailingAnnualDividendRate': 'Taxa de dividendos anual anterior',
+    'trailingAnnualDividendYield': 'Rendimento anual de dividendos anterior',
+    'fiveYearAvgDividendYield': 'Rendimento médio de dividendos em cinco anos',
+    'fiftyTwoWeekLow': 'Mínima de 52 semanas',
+    'fiftyTwoWeekHigh': 'Máxima de 52 semanas',
+    'logo_url': 'URL do logotipo',
+    # Adicione mais traduções conforme necessário
+}
+
+# Obtendo todas as informações disponíveis
+info = petrobras.info
+
+# Imprimindo as informações com as chaves traduzidas usando um loop for
+for chave, valor in info.items():
+    chave_traduzida = traducoes.get(chave, chave)
+    print(chave_traduzida, ":", valor)
+    
+for chave in info.keys():
+    print(chave)
+    
+    'longName': Nome da empresa
+    'symbol': Símbolo da ação
+    'sector': Setor
+    'industry': Indústria
+    'previousClose': Fechamento anterior
+    'regularMarketOpen': Abertura do mercado regular
+    'regularMarketDayHigh': Máxima do dia
+    'regularMarketDayLow': Mínima do dia
+    'regularMarketVolume': Volume de negociação
+    'marketCap': Capitalização de mercado
+    'trailingPE': P/L (Preço/Lucro)
+    'forwardPE': P/L Forward
+    'beta': Beta
+    'dividendYield': Dividendo de rendimento
+    'dividendRate': Dividendo por ação
+    'exDividendDate': Data ex-dividendo
+    'payoutRatio': Razão de pagamento de dividendos
+    'trailingAnnualDividendRate': Taxa de dividendos anual anterior
+    'trailingAnnualDividendYield': Rendimento anual de dividendos anterior
+    'fiveYearAvgDividendYield': Rendimento médio de dividendos em cinco anos
+    'fiftyTwoWeekLow': Mínima de 52 semanas
+    'fiftyTwoWeekHigh': Máxima de 52 semanas
+    'logo_url': URL do logotipo
