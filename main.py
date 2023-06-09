@@ -3,6 +3,21 @@ import yfinance as yf
 import plotly.graph_objects as go
 import streamlit as st
 
+def candlestick_chart(data):
+    fig = go.Figure(data=[go.Candlestick(x=data.index,
+                    open=data['Open'],
+                    high=data['High'],
+                    low=data['Low'],
+                    close=data['Close'])])
+
+    fig.update_layout(
+        title='Gráfico de Velas',
+        yaxis_title='Preço',
+        xaxis_rangeslider_visible=False
+    )
+
+    return fig
+
 tickers = investpy.get_stocks_list(country='brazil')
 tickers = sorted(tickers)
 
@@ -24,6 +39,6 @@ periodo = st.sidebar.selectbox('Selecione o período: ', períodos)
 
 dados = yf.download(ticker, period=periodo)
 
-fig = go.Figure(data=go.Scatter(x=dados.index, y=dados['Close']))
-fig.update_layout(title=f"Gráfico de Preço de Fechamento para {ticker}")
+st.title('Gráfico de Velas')
+fig = candlestick_chart(dados)
 st.plotly_chart(fig)
