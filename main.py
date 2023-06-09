@@ -3,15 +3,25 @@ import yfinance as yf
 import plotly.graph_objects as go
 import streamlit as st
 
-def candlestick_chart(data):
-    fig = go.Figure(data=[go.Candlestick(x=data.index,
-                    open=data['Open'],
-                    high=data['High'],
-                    low=data['Low'],
-                    close=data['Close'])])
+def candlestick_with_line_chart(data):
+    fig = go.Figure()
+
+    # Gráfico de velas
+    fig.add_trace(go.Candlestick(x=data.index,
+                                 open=data['Open'],
+                                 high=data['High'],
+                                 low=data['Low'],
+                                 close=data['Close'],
+                                 name='Candles'))
+
+    # Gráfico de linhas
+    fig.add_trace(go.Scatter(x=data.index,
+                             y=data['Close'],
+                             mode='lines',
+                             name='Line Chart'))
 
     fig.update_layout(
-        title='Gráfico de Velas',
+        title='Gráfico de Velas com Linha',
         yaxis_title='Preço',
         xaxis_rangeslider_visible=False
     )
@@ -39,6 +49,6 @@ periodo = st.sidebar.selectbox('Selecione o período: ', períodos)
 
 dados = yf.download(ticker, period=periodo)
 
-st.title('Gráfico de Velas')
-fig = candlestick_chart(dados)
+st.title('Gráfico de Velas com Linha')
+fig = candlestick_with_line_chart(dados)
 st.plotly_chart(fig)
