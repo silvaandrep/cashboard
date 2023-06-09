@@ -14,3 +14,6 @@ selected_option = st.selectbox('Selecione uma opção', opcoes)
 
 # Exibir a opção selecionada
 st.write('Você selecionou:', selected_option)
+
+selected_option = st.sidebar.selectbox('Selecione uma ação', stocks)
+st.sidebar.write('Você selecionou ', selected_option)
