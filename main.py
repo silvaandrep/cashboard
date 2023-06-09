@@ -16,6 +16,8 @@ st.sidebar.write('Você selecionou ', selected_option2)
 
 st.header('Header Principal')
 st.write('Você selecionou')
+st.write('Você selecionou')
+st.write('Você selecionou')
 
 # Criar o combobox no Streamlit
 selected_option = st.selectbox('Selecione uma opção', opcoes)
