@@ -1,4 +1,4 @@
-import investpy
+#import investpy
 import streamlit as st
 
 #tickers = investpy.get_stocks_list(country='brazil')
