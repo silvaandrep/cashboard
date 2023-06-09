@@ -1,8 +1,7 @@
-import investpy
 import streamlit as st
 
-tickers = investpy.get_stocks_list(country='brazil')
-
-tickers = sorted(tickers)
-
-selected_option = st.selectbox('Selecione uma opção', stocks)
+st.title('Title Principal')
+st.header('Header Principal')
+st.write('Write Principal')
+st.sidebar.header('Header Sidebar')
+st.sidebar.write('Write Sidebar')
