@@ -9,7 +9,7 @@ st.sidebar.header('Header Sidebar')
 st.sidebar.write('Write Sidebar')
 
 # Criar o combobox no Streamlit
-selected_option2 = st.sidebar.selectbox('Selecione uma ação', stocks)
+selected_option2 = st.sidebar.selectbox('Selecione uma ação', opcoes)
 
 # Exibir a opção selecionada
 st.sidebar.write('Você selecionou ', selected_option2)
